@@ -3,8 +3,11 @@ import { ReactElement } from 'react';
 import { GiFlowerPot } from 'react-icons/gi';
 
 import { BackgroundImage } from '../common/BackgroundImage';
+import { usePrefetchTreatments } from '../treatments/hooks/useTreatments';
 
 export function Home(): ReactElement {
+  // Home은 동적이므로 여러분 실행 x
+  usePrefetchTreatments();
   return (
     <Stack textAlign="center" justify="center" height="84vh">
       <BackgroundImage />
